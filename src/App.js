@@ -1,26 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Provider } from "react-redux";
+import { store } from "./redux/store";
+import Header from "./Components/Header";
+import GlobalCase from "./Components/GlobalCase";
+import IndianCase from "./Components/IndianCase";
+import Symptoms from "./Components/Symptoms";
+import NewsHighlights from "./Components/NewsHighlights";
+import Footer from "./Components/Footer";
+import ScrollButton from "./Components/ScrollButton";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Provider store={store}>
+        <div className="container">
+          <Header />
+          <GlobalCase />
+          <IndianCase />
+          <Symptoms />
+          <NewsHighlights />
+          <ScrollButton />
+          <Footer />
+        </div>
+      </Provider>
+    </>
   );
-}
+};
 
 export default App;
