@@ -155,15 +155,14 @@ svg {
 }
 .piechart-container .btn {
   color: white;
-  padding: 4px 5px;
+  padding: 3px 3px;
   border-radius: 5px;
   margin-right: 5px;
   display: inline-block;
-  font-size: 0.9rem;
 }
 .piechart-container p {
   margin: 0;
-  font-size: 0.8em;
+  font-size: 0.7em;
 }
 .piechart-container .confirmed {
   background-color: #f94f4f;
@@ -517,6 +516,7 @@ table tbody td:first-child {
 .MapExplorer .map-stats .stats {
   margin: 5px 5px;
   min-width: 100px;
+  height: 60px;
   padding: 2px;
   width: 100px;
   border-radius: 10px;
@@ -552,7 +552,7 @@ table tbody td:first-child {
 }
 /* ====== Timer-Series========  */
 
-/* ==========MAP Explorer ========= */
+/* ==========MAP Explorer - SVG ========= */
 .MapExplorer .svg-parent {
   display: flex;
   flex-direction: row;
@@ -575,7 +575,6 @@ table tbody td:first-child {
   margin: 10px 0;
   padding: 5px 0;
   margin-right: 5px;
-  /* border: 2px solid red; */
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
   background-color: #fff;
   border-radius: 5px;
@@ -641,10 +640,13 @@ table tbody td:first-child {
 .back-button {
   z-index: 11;
 }
-
 .MapExplorer .legend {
   margin-top: 1em;
   width: 100%;
+}
+.map-hover {
+  stroke: #ff073a;
+  stroke-width: 2;
 }
 /* ==========MAP Explorer ========= */
 
@@ -698,16 +700,17 @@ table tbody td:first-child {
   z-index: -1;
 }
 
-.chartjs-render-monitor {
+/* .chartjs-render-monitor {
   animation: chartjs-render-animation 0.001s;
-  animation-duration: 0.001s;
-  animation-timing-function: ease;
-  animation-delay: 0s;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-  animation-fill-mode: none;
-  animation-play-state: running;
-  animation-name: chartjs-render-animation;
+} */
+
+@keyframes chartjs-render-animation {
+  0% {
+    opacity: 0.99;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 /* =======Spread Trends ======= */
@@ -742,8 +745,8 @@ table tbody td:first-child {
 .tabs .tab {
   padding: 3px;
   color: #fff;
-  background-color: #007bff;
-  border-color: #007bff;
+  background-color: #6610f2;
+  border-color: #6610f2;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   cursor: pointer;
@@ -751,11 +754,12 @@ table tbody td:first-child {
   margin-right: 0.25rem;
   transition: all 0.3s ease-in-out;
   opacity: 0.5;
-  font-weight: 400;
 }
 .tabs .tab h4 {
   font-size: 0.9rem;
   margin: 0;
+  font-weight: 400;
+  opacity: 0.9;
 }
 
 .timeseries-header .scale-modes {
