@@ -43,6 +43,11 @@ const DailyConfirmedChart = (props) => {
     labels: dates,
     datasets: [
       {
+        data: confirmed,
+        label: "Confirmed",
+        backgroundColor: "rgba(249, 79, 79, 1.2)",
+      },
+      {
         data: deceased,
         label: "Deaths",
         backgroundColor: "black",
@@ -51,11 +56,6 @@ const DailyConfirmedChart = (props) => {
         data: recovered,
         label: "Recovered",
         backgroundColor: "#28a745",
-      },
-      {
-        data: confirmed,
-        label: "Confirmed",
-        backgroundColor: "#ff073a",
       },
     ],
   };

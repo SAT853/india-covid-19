@@ -82,7 +82,7 @@ const AgeChart = (props) => {
       {
         data: ages,
         label: "Cases",
-        backgroundColor: "#ff073a",
+        backgroundColor: "rgb(249, 79, 79)",
       },
     ],
   };

@@ -41,7 +41,7 @@ const GenderChart = (props) => {
     datasets: [
       {
         data: [male, female, unknown],
-        backgroundColor: ["blue", "pink", "grey"],
+        backgroundColor: ["#20c997", "#dc3545", "#6c757d"],
         label: "Hola",
       },
     ],

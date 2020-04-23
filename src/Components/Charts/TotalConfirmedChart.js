@@ -47,9 +47,9 @@ const TotalConfirmedChart = (props) => {
         borderWidth: 2,
         data: confirmed,
         borderCapStyle: "round",
-        pointBackgroundColor: "#ff073a",
+        pointBackgroundColor: "rgba(249, 79, 79, 1.2)",
         label: "Confirmed",
-        borderColor: "#ff073a",
+        borderColor: "rgba(249, 79, 79, 1.2)",
         pointHoverRadius: 4,
       },
       {
