@@ -3,7 +3,7 @@
 This repository contains simple data monitoring for Covid-19 using React.js
 
 <p align="center">
-<img src="" width="100%">
+<img src="https://github.com/SAT853/india-covid-19/blob/master/src/assets/covid19.jpg" width="100%">
 </p>
 
 - [Demo](https://sat853.github.io/india-covid-19/)
@@ -25,4 +25,7 @@ This repository contains simple data monitoring for Covid-19 using React.js
 
 ## Data Source
 
-Data source from [https://covid19.mathdro.id](https://github.com/mathdroid/covid-19-api) API
+Data source:
+
+- [https://covid19.mathdro.id](https://github.com/mathdroid/covid-19-api) API for Global Data
+- [https://api.covid19india.org](https://github.com/covid19india/api) API for Country Data
