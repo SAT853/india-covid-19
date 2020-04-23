@@ -220,7 +220,7 @@ function TimeSeries(props) {
           .attr("class", "focus")
           .attr("fill", colors[i])
           .attr("stroke", colors[i])
-          .attr("r", 4);
+          .attr("r", 3);
       });
 
       function mousemove() {
@@ -280,7 +280,7 @@ function TimeSeries(props) {
           .attr("class", "dot")
           .attr("fill", color)
           .attr("stroke", color)
-          .attr("r", 2)
+          .attr("r", 1.5)
           .transition(t)
           .attr("cx", (d) => xScale(d.date))
           .attr("cy", (d) => yScale(d[type]));
@@ -300,7 +300,7 @@ function TimeSeries(props) {
             .attr("class", "trend")
             .attr("fill", "none")
             .attr("stroke", color + "99")
-            .attr("stroke-width", 4);
+            .attr("stroke-width", 2);
           // HACK
           // Path interpolation is non-trivial. Ideally, a custom path tween
           // function should be defined which takes care that old path dots
