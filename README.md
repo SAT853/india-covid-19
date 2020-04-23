@@ -3,10 +3,11 @@
 This repository contains simple data monitoring for Covid-19 using React.js
 
 <p align="center">
-<img src="https://github.com/SAT853/india-covid-19/blob/master/src/assets/covid19.jpg" width="100%">
+<img src="https://github.com/SAT853/india-covid-19/blob/master/src/assets/Covid-19-Website%20Screen%20Shot.png" width="100%">
 </p>
 
-- [Demo](https://sat853.github.io/india-covid-19/)
+- [Demo -https://sat853.github.io/india-covid-19/](https://sat853.github.io/india-covid-19/)
+
 
 **Feature Include**
 
