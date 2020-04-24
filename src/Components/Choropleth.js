@@ -185,15 +185,14 @@ const ChoroplethMap = ({
     return str.join(" ");
   };
 
+  // Fetch Map Topology Data
   useEffect(() => {
-    const setdata = async () => {
-      const data = await d3.json(mapMeta.geoDataFile);
+    d3.json(mapMeta.geoDataFile).then((data) => {
       if (statistic && choroplethMap.current) {
         ready(data);
         setSvgRenderCount((prevCount) => prevCount + 1);
       }
-    };
-    setdata();
+    });
   }, [mapMeta.geoDataFile, statistic, ready]);
 
   // Region Highlighted Function
