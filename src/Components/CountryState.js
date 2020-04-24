@@ -93,7 +93,7 @@ const CountryState = (props) => {
   return (
     <>
       <button
-        className="btn btn-outline-secondary m-1 mb-2 "
+        className="btn btn-outline-primary m-1 mb-2 "
         onClick={() => settoggel(!toggel)}
       >
         {!toggel ? "View Country Wise Report" : "Hide Details"}

@@ -106,7 +106,7 @@ const Table = (props) => {
     return (
       <>
         <button
-          className="btn btn-outline-secondary m-2"
+          className="btn btn-outline-primary m-2"
           onClick={() => settoggel(!toggel)}
         >
           {!toggel ? "View State/Distric Wise Report" : "Hide Details"}
