@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Lato:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;600;700&display=swap");
 
 *,
 *::before,
@@ -12,7 +11,7 @@
 /*============= Body conatiner ===============*/
 body {
   background: rgb(240, 240, 240);
-  font-family: "Lato", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-family: "Baloo Tamma 2", sans-serif;
 }
 h2 {
   font-size: 1.2em;
@@ -184,7 +183,6 @@ svg {
   text-align: start;
   width: 100%;
   padding: 0;
-  /* border: 2px solid red; */
 }
 .symptoms ul {
   margin-left: 20px;
@@ -198,9 +196,11 @@ abbr[title] {
 .table thead th {
   vertical-align: baseline;
 }
+.badge {
+  font-weight: 500;
+}
 .badge-warning {
   background-color: #f94f4f;
-  font-weight: 500;
   color: white;
 }
 .badge-success {
@@ -236,6 +236,7 @@ abbr[title] {
 }
 
 .table thead th.sticky {
+  background-color: #a8acb0b8;
   position: sticky;
   padding: 3px;
 }
@@ -398,9 +399,11 @@ table tbody td:first-child {
 .alert-heading {
   font-size: 1.2em;
   text-decoration: underline;
+  font-weight: 600;
 }
 .today-alert p {
   font-size: 0.9em;
+  margin: 0;
 }
 .google-pay a {
   font-size: 0.9em;
@@ -604,11 +607,13 @@ table tbody td:first-child {
 .last-update h6 {
   color: rgba(40, 167, 69, 0.6);
   font-weight: 900;
+  font-size: 0.8rem;
+  margin: 0;
 }
 .last-update h3 {
   color: #28a745;
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 .MapExplorer .meta .district-confirmed {
   color: #e23028;
@@ -675,14 +680,21 @@ table tbody td:first-child {
 }
 
 .cards-container .cards .card .charts-header .chart-title {
-  font-size: 1rem !important;
-  font-weight: 900;
-  text-transform: uppercase;
+  font-size: 0.9rem !important;
   padding: 10px 0;
+}
+
+.chart-note {
+  font-size: 0.9rem;
 }
 .cards-container .cards .card .charts-header .chart-content {
   height: 100%;
   width: 100%;
+}
+.chart-content .chartjs-render-monitor {
+  width: 98% !important;
+  height: 98% !important;
+  margin: 0 auto;
 }
 
 .chartjs-size-monitor,
@@ -700,10 +712,6 @@ table tbody td:first-child {
   z-index: -1;
 }
 
-/* .chartjs-render-monitor {
-  animation: chartjs-render-animation 0.001s;
-} */
-
 @keyframes chartjs-render-animation {
   0% {
     opacity: 0.99;
@@ -716,7 +724,6 @@ table tbody td:first-child {
 /* =======Spread Trends ======= */
 .timeseries-header {
   width: 95%;
-  /* border: 2px solid red; */
   margin: 10px 0;
   margin-left: 5px;
   padding: 10px;
@@ -745,8 +752,8 @@ table tbody td:first-child {
 .tabs .tab {
   padding: 3px;
   color: #fff;
-  background-color: #6610f2;
-  border-color: #6610f2;
+  background-color: #6c757d;
+  border-color: #6c757d;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   cursor: pointer;
@@ -758,7 +765,7 @@ table tbody td:first-child {
 .tabs .tab h4 {
   font-size: 0.9rem;
   margin: 0;
-  font-weight: 400;
+  font-weight: 500;
   opacity: 0.9;
 }
 
@@ -1010,7 +1017,7 @@ label {
     height: 100vh;
   }
   .global-data {
-    min-width: 200px;
+    min-width: 180px;
   }
 
   h2 {
@@ -1044,6 +1051,9 @@ label {
   .news-container p {
     font-size: 0.85em;
   }
+  .global-data {
+    min-width: 160px;
+  }
 }
 
 @media only screen and (max-width: 720px) {
@@ -1068,6 +1078,9 @@ label {
   .news-container {
     grid-template-columns: repeat(2, 1fr);
   }
+  .global-data {
+    min-width: 145px;
+  }
 }
 
 @media only screen and (max-width: 620px) {
@@ -1086,6 +1099,17 @@ label {
   .timeseries-header {
     margin: 10px auto;
     width: 100%;
+  }
+  .data-container {
+    flex-wrap: wrap;
+  }
+
+  .global-data {
+    min-width: 140px;
+    margin: 10px auto 5px;
+  }
+  .global-data > div {
+    padding: 5px 3px;
   }
 }
 
@@ -1108,7 +1132,7 @@ label {
   }
   .cards-container .cards .card {
     width: 100%;
-    height: 25rem;
+    height: 30rem;
   }
 }
 
@@ -1181,8 +1205,9 @@ label {
   .google-pay a {
     font-size: 0.75em;
   }
-  .alert-heading {
-    font-size: 1em;
+  .alert-heading,
+  .today-alert p {
+    font-size: 0.9em;
   }
   .global-case span {
     font-size: 0.75em;
