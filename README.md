@@ -8,7 +8,6 @@ This repository contains simple data monitoring for Covid-19 using React.js
 
 - [Demo -https://sat853.github.io/india-covid-19/](https://sat853.github.io/india-covid-19/)
 
-
 **Feature Include**
 
 - Hooks
@@ -23,6 +22,10 @@ This repository contains simple data monitoring for Covid-19 using React.js
 - `npm install`
 - `npm start`
 - Visit http://localhost:3000
+
+## Maintainers
+
+[SAT853](https://sat853.github.io)
 
 ## Data Source
 
