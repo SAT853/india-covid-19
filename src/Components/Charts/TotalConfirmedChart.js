@@ -9,6 +9,7 @@ const TotalConfirmedChart = (props) => {
   const deceased = [];
 
   defaults.global.elements.line.fill = false;
+  defaults.global.defaultFontFamily = "Baloo Tamma 2";
   defaults.global.tooltips.intersect = false;
   defaults.global.tooltips.mode = "nearest";
   defaults.global.tooltips.position = "average";
@@ -84,6 +85,19 @@ const TotalConfirmedChart = (props) => {
       "touchend",
     ],
     maintainAspectRatio: false,
+    legend: {
+      display: true,
+      labels: {
+        usePointStyle: true,
+        generateLabels: (chart) => {
+          const labels = defaults.global.legend.labels.generateLabels(chart);
+          labels.forEach((label) => {
+            label.pointStyle = "rectRounded";
+          });
+          return labels;
+        },
+      },
+    },
     tooltips: {
       mode: "index",
     },

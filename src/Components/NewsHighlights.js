@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Loader from "./Loader";
+import axios from "axios";
 const initialState = {
   articles: [],
   isLogged: false,
@@ -8,13 +9,12 @@ const NewsHighlights = () => {
   const [state, setstate] = useState(initialState);
 
   useEffect(() => {
-    fetch(
-      "https://newsapi.org/v2/top-headlines?country=in&q=COVID&sortBy=popularity&apiKey=cf7f3c64d5b24083b7e9db822088fda1&pageSize=9&page=1"
+    axios(
+      "https://newsapi.org/v2/top-headlines?country=in&q=COVID&sortBy=popularity&apiKey=69e933747fdd4df4acc48c6fe3aba846&pageSize=9"
     )
-      .then((res) => res.json())
-      .then((res) =>
+      .then(({ data }) =>
         setstate({
-          articles: res.articles,
+          articles: data.articles,
           isLogged: true,
           error: "",
         })

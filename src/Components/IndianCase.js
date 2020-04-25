@@ -290,17 +290,20 @@ const IndianCase = (props) => {
 
                   <div className="trends-state-name">
                     <select
+                      value={activeStateCode}
                       onChange={({ target }) => {
-                        onHighlightState(JSON.parse(target.value));
+                        const selectedState = target.selectedOptions[0].getAttribute(
+                          "statedata"
+                        );
+                        onHighlightState(JSON.parse(selectedState));
                       }}
                     >
                       {states.map((s) => {
                         return (
                           <option
+                            value={s.statecode}
                             key={s.statecode}
-                            value={JSON.stringify(s)}
-                            defaultValue="All States"
-                            // selected={s.statecode === activeStateCode}
+                            statedata={JSON.stringify(s)}
                           >
                             {s.state === "Total" ? "All States" : s.state}
                           </option>

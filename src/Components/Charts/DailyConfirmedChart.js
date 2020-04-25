@@ -24,6 +24,7 @@ const DailyConfirmedChart = (props) => {
   defaults.global.tooltips.position = "nearest";
   defaults.global.legend.display = true;
   defaults.global.legend.position = "bottom";
+  defaults.global.legend.labels.usePointStyle = true;
   defaults.global.hover.intersect = false;
 
   if (!props.timeseries || props.timeseries.length === 0) {
@@ -69,7 +70,18 @@ const DailyConfirmedChart = (props) => {
     events: ["mousemove", "mouseout", "touchstart", "touchmove", "touchend"],
     maintainAspectRatio: false,
     legend: {
-      display: false,
+      display: true,
+      reverse: true,
+      labels: {
+        usePointStyle: true,
+        generateLabels: (chart) => {
+          const labels = defaults.global.legend.labels.generateLabels(chart);
+          labels.forEach((label) => {
+            label.pointStyle = "rectRounded";
+          });
+          return labels;
+        },
+      },
     },
     layout: {
       padding: {
