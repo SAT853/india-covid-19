@@ -180,7 +180,7 @@ const Row = (props) => {
         className={"state-last-update"}
         style={{ display: props.reveal && !props.total ? "" : "none" }}
       >
-        <td colSpan={2}>
+        <td colSpan={4}>
           <div className="last-update">
             <h6>Last updated&nbsp;</h6>
             <h6
@@ -248,6 +248,36 @@ const Row = (props) => {
             </div>
           </div>
         </td>
+        <td>
+          <div className="heading-content">
+            <abbr
+              className={`${window.innerWidth <= 769 ? "is-cherry" : ""}`}
+              title="Active"
+            >
+              {window.innerWidth <= 375 ? "Act" : "Active"}
+            </abbr>
+          </div>
+        </td>
+        <td>
+          <div className="heading-content">
+            <abbr
+              className={`${window.innerWidth <= 769 ? "is-cherry" : ""}`}
+              title="Recovered"
+            >
+              {window.innerWidth <= 375 ? "Rcvr" : "Recovered"}
+            </abbr>
+          </div>
+        </td>
+        <td>
+          <div className="heading-content">
+            <abbr
+              className={`${window.innerWidth <= 769 ? "is-cherry" : ""}`}
+              title="Deaths"
+            >
+              Deaths
+            </abbr>
+          </div>
+        </td>
       </tr>
 
       {sortedDistricts &&
@@ -258,18 +288,11 @@ const Row = (props) => {
               return (
                 <tr
                   key={index}
-                  className={`district`}
+                  className={`district district-data`}
                   style={{
                     display: props.reveal && !props.total ? "" : "none",
                     background: index % 2 === 0 ? "#f8f9fa" : "",
                   }}
-                  // onMouseEnter={() =>
-                  //   props.onHighlightDistrict?.(district, state, props.index)
-                  // }
-                  // onMouseLeave={() => props.onHighlightDistrict?.()}
-                  /* onTouchStart={() =>
-                    props.onHighlightDistrict?.(district, state, props.index)
-                  }*/
                 >
                   <td>{district}</td>
                   <td>
@@ -284,6 +307,45 @@ const Row = (props) => {
 
                     <span className="table__count-text">
                       {formatNumberSat(sortedDistricts[district].confirmed)}
+                    </span>
+                  </td>
+                  <td>
+                    <span className="deltas" style={{ color: "#ff073a" }}>
+                      {sortedDistricts[district].delta.active > 0 && (
+                        <Icon.ArrowUp />
+                      )}
+                      {sortedDistricts[district].delta.active > 0
+                        ? `${sortedDistricts[district].delta.active}`
+                        : ""}
+                    </span>
+                    <span className="table__count-text">
+                      {formatNumberSat(sortedDistricts[district].active)}
+                    </span>
+                  </td>
+                  <td>
+                    <span className="deltas" style={{ color: "#ff073a" }}>
+                      {sortedDistricts[district].delta.recovered > 0 && (
+                        <Icon.ArrowUp />
+                      )}
+                      {sortedDistricts[district].delta.recovered > 0
+                        ? `${sortedDistricts[district].delta.recovered}`
+                        : ""}
+                    </span>
+                    <span className="table__count-text">
+                      {formatNumberSat(sortedDistricts[district].recovered)}
+                    </span>
+                  </td>
+                  <td>
+                    <span className="deltas" style={{ color: "#ff073a" }}>
+                      {sortedDistricts[district].delta.deceased > 0 && (
+                        <Icon.ArrowUp />
+                      )}
+                      {sortedDistricts[district].delta.deceased > 0
+                        ? `${sortedDistricts[district].delta.deceased}`
+                        : ""}
+                    </span>
+                    <span className="table__count-text">
+                      {formatNumberSat(sortedDistricts[district].deceased)}
                     </span>
                   </td>
                 </tr>
@@ -316,22 +378,6 @@ const Row = (props) => {
               </span>
             </td>
           </tr>
-          {/* <span
-            style={{
-              display: props.reveal && !props.total ? "" : "none",
-              fontSize: "0.75rem",
-              color: "#201aa299",
-            }}
-          >
-            #
-          </span> */}
-          {/* <div
-            style={{
-              display: props.reveal && !props.total ? "" : "none",
-            }}
-          >
-            Awaiting patient-level details from State Bulletin
-          </div> */}
         </React.Fragment>
       )}
     </React.Fragment>

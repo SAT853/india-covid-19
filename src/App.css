@@ -240,12 +240,16 @@ abbr[title] {
   position: sticky;
   padding: 3px;
 }
+
+.table tbody .state-last-update {
+  background-color: white !important;
+}
 .table tbody .state-last-update td .last-update {
-  text-align: left;
   flex-direction: row;
+  padding: 5px;
   align-items: baseline;
   color: #28a745 !important;
-  transform: translateX(1rem);
+  margin-top: 20px;
 }
 
 .table tbody .state-last-update td .last-update > h6 {
@@ -254,10 +258,9 @@ abbr[title] {
   font-weight: 600;
 }
 
-.table tbody .district-heading {
-  transform: translateX(1rem);
+.state-last-update .last-update {
+  /* margin-top: 10px; */
 }
-
 .table tbody .district-heading td {
   font-size: 0.75rem;
   font-weight: 900;
@@ -265,9 +268,6 @@ abbr[title] {
   background: rgba(108, 117, 125, 0.0627451);
 }
 
-.table tbody .district {
-  transform: translateX(1rem);
-}
 table .dropdown {
   display: inline-block;
   position: absolute;
