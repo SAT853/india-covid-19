@@ -258,9 +258,6 @@ abbr[title] {
   font-weight: 600;
 }
 
-.state-last-update .last-update {
-  /* margin-top: 10px; */
-}
 .table tbody .district-heading td {
   font-size: 0.75rem;
   font-weight: 900;
