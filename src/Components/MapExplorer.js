@@ -70,6 +70,13 @@ const MapExplorer = ({
           statistic.maxConfirmed = confirmed;
         }
         acc[district] = districtWiseData[district].confirmed;
+        // acc[district] = {
+        //   ...acc[district],
+        //   confirmed: districtWiseData[district].confirmed,
+        //   active: districtWiseData[district].active,
+        //   deaths: districtWiseData[district].deceased,
+        //   recovered: districtWiseData[district].recovered,
+        // };
         return acc;
       }, {});
     }
@@ -163,7 +170,6 @@ const MapExplorer = ({
       )
     );
   }, [panelRegion, stateTestData, testObj]);
-
   return (
     <div
       className="MapExplorer fadeInUp"
@@ -273,12 +279,15 @@ const MapExplorer = ({
             </h3>
           </div>
         )}
-
+        {/* {currentMap.mapType === MAP_TYPES.STATE &&
+          currentMapData[currentHoveredRegion.name] &&
+          console.log(currentMapData[currentHoveredRegion.name])} */}
         {currentMap.mapType === MAP_TYPES.STATE &&
         currentHoveredRegion.name !== currentMap.name ? (
           <h1 className="district-confirmed">
             {currentMapData[currentHoveredRegion.name]
-              ? currentMapData[currentHoveredRegion.name]
+              ? // ? currentMapData[currentHoveredRegion.name]["confirmed"]
+                currentMapData[currentHoveredRegion.name]
               : 0}
             <br />
             <span style={{ fontSize: "0.75rem", fontWeight: 600 }}>
