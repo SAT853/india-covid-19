@@ -241,9 +241,7 @@ abbr[title] {
   padding: 3px;
 }
 
-.table tbody .state-last-update {
-  background-color: white !important;
-}
+
 .table tbody .state-last-update td .last-update {
   flex-direction: row;
   padding: 5px;
@@ -251,6 +249,7 @@ abbr[title] {
   color: #28a745 !important;
   margin-top: 20px;
 }
+
 
 .table tbody .state-last-update td .last-update > h6 {
   display: inline;

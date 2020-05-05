@@ -264,7 +264,11 @@ const Row = (props) => {
               className={`${window.innerWidth <= 769 ? "is-cherry" : ""}`}
               title="Recovered"
             >
-              {window.innerWidth <= 375 ? "Rcvr" : "Recovered"}
+          {window.innerWidth <= 769
+                          ? window.innerWidth <= 375
+                            ? "R"
+                            : "Rcvrd"
+                          : "Recovered"}
             </abbr>
           </div>
         </td>
@@ -280,12 +284,15 @@ const Row = (props) => {
         </td>
       </tr>
 
+      
+
       {sortedDistricts &&
         Object.keys(sortedDistricts)
           .filter((district) => district.toLowerCase() !== "unknown")
           .map((district, index) => {
             if (district.toLowerCase() !== "unknown") {
               return (
+              
                 <tr
                   key={index}
                   className={`district district-data`}
@@ -310,7 +317,7 @@ const Row = (props) => {
                     </span>
                   </td>
                   <td>
-                    <span className="deltas" style={{ color: "#ff073a" }}>
+                    <span className="deltas" style={{ color: "17A2BB" }}>
                       {sortedDistricts[district].delta.active > 0 && (
                         <Icon.ArrowUp />
                       )}
@@ -323,7 +330,7 @@ const Row = (props) => {
                     </span>
                   </td>
                   <td>
-                    <span className="deltas" style={{ color: "#ff073a" }}>
+                    <span className="deltas" style={{ color: "rgb(40, 167, 69)" }}>
                       {sortedDistricts[district].delta.recovered > 0 && (
                         <Icon.ArrowUp />
                       )}
@@ -336,7 +343,7 @@ const Row = (props) => {
                     </span>
                   </td>
                   <td>
-                    <span className="deltas" style={{ color: "#ff073a" }}>
+                    <span className="deltas" style={{ color: "black" }}>
                       {sortedDistricts[district].delta.deceased > 0 && (
                         <Icon.ArrowUp />
                       )}
@@ -349,6 +356,8 @@ const Row = (props) => {
                     </span>
                   </td>
                 </tr>
+               
+               
               );
             }
             return null;
@@ -380,6 +389,15 @@ const Row = (props) => {
           </tr>
         </React.Fragment>
       )}
+            <tr
+        className={"state-last-update"}
+        style={{ display: props.reveal && !props.total ? "" : "none" }}
+      >
+        <td colSpan={5}>
+          <div className="last-update">
+          </div>
+        </td>
+      </tr>
     </React.Fragment>
   );
 };
