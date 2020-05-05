@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/india-covid-19/static/css/main.d8bb1c28.chunk.css",
-    "main.js": "/india-covid-19/static/js/main.1d598b44.chunk.js",
-    "main.js.map": "/india-covid-19/static/js/main.1d598b44.chunk.js.map",
+    "main.css": "/india-covid-19/static/css/main.6a47f562.chunk.css",
+    "main.js": "/india-covid-19/static/js/main.eaeed96c.chunk.js",
+    "main.js.map": "/india-covid-19/static/js/main.eaeed96c.chunk.js.map",
     "runtime-main.js": "/india-covid-19/static/js/runtime-main.b9283583.js",
     "runtime-main.js.map": "/india-covid-19/static/js/runtime-main.b9283583.js.map",
     "static/css/2.69121389.chunk.css": "/india-covid-19/static/css/2.69121389.chunk.css",
-    "static/js/2.bd5a53df.chunk.js": "/india-covid-19/static/js/2.bd5a53df.chunk.js",
-    "static/js/2.bd5a53df.chunk.js.map": "/india-covid-19/static/js/2.bd5a53df.chunk.js.map",
+    "static/js/2.98c860cd.chunk.js": "/india-covid-19/static/js/2.98c860cd.chunk.js",
+    "static/js/2.98c860cd.chunk.js.map": "/india-covid-19/static/js/2.98c860cd.chunk.js.map",
     "index.html": "/india-covid-19/index.html",
-    "precache-manifest.df97107bae1113007cc3a7b44c68f112.js": "/india-covid-19/precache-manifest.df97107bae1113007cc3a7b44c68f112.js",
+    "precache-manifest.79e01014dc0afc6467d5fde2d5a5de9f.js": "/india-covid-19/precache-manifest.79e01014dc0afc6467d5fde2d5a5de9f.js",
     "service-worker.js": "/india-covid-19/service-worker.js",
     "static/css/2.69121389.chunk.css.map": "/india-covid-19/static/css/2.69121389.chunk.css.map",
-    "static/css/main.d8bb1c28.chunk.css.map": "/india-covid-19/static/css/main.d8bb1c28.chunk.css.map",
-    "static/js/2.bd5a53df.chunk.js.LICENSE.txt": "/india-covid-19/static/js/2.bd5a53df.chunk.js.LICENSE.txt",
-    "static/media/corona-logo.svg": "/india-covid-19/static/media/corona-logo.a250df9d.svg"
+    "static/css/main.6a47f562.chunk.css.map": "/india-covid-19/static/css/main.6a47f562.chunk.css.map",
+    "static/js/2.98c860cd.chunk.js.LICENSE.txt": "/india-covid-19/static/js/2.98c860cd.chunk.js.LICENSE.txt",
+    "static/media/corona-logo.svg": "/india-covid-19/static/media/corona-logo.56dde1ee.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.b9283583.js",
     "static/css/2.69121389.chunk.css",
-    "static/js/2.bd5a53df.chunk.js",
-    "static/css/main.d8bb1c28.chunk.css",
-    "static/js/main.1d598b44.chunk.js"
+    "static/js/2.98c860cd.chunk.js",
+    "static/css/main.6a47f562.chunk.css",
+    "static/js/main.eaeed96c.chunk.js"
   ]
 }
